@@ -35,10 +35,12 @@ class ListFragment : Fragment() {
         val coffeeList = listOf<View>(
             view.findViewById(R.id.affogato),
             view.findViewById(R.id.americano),
-            view.findViewById(R.id.latte)
+            view.findViewById(R.id.latte),
+            view.findViewById(R.id.cappuccino),
+            view.findViewById(R.id.espresso)
         )
 
-        coffeeList.forEach { coffee ->
+        coffeeList.forEach{ coffee ->
             val fragmentBundle = Bundle()
             fragmentBundle.putInt(COFFEE_ID, coffee.id)
             coffee.setOnClickListener {
